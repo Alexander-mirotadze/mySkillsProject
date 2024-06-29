@@ -1,0 +1,110 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(225, 225, 225, 0.5);
+  backdrop-filter: blur(10px);
+}
+.logo-div {
+  width: 50px;
+  height: 50px;
+  background-image: url("https://img.freepik.com/free-vector/flat-code-logo-collection_23-2148829940.jpg?w=740&t=st=1716752262~exp=1716752862~hmac=b7f81ce10df3802efe59bc46a0a92ed48bd97f6651ae338bdbca8422aa52d918");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 999999px;
+  border: 2px solid white;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.logo-div:hover {
+  border: 2px solid red;
+}
+.nav-bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-bar a {
+  width: fit-content;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: "Caveat";
+  font-size: 24px;
+  font-weight: bolder;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+.nav-bar a:hover {
+  box-shadow: 2px 4px 4px;
+}
+.nav-bar a.active {
+  color: red;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1, 1.1);
+}
+.sign-in-up-out-buttons-menu {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99999px;
+  border: 2px solid white;
+  background-color: black;
+  font-size: 10px;
+  overflow: hidden;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+.sign-in-up-out-buttons-menu:hover {
+  border: 2px solid red;
+  color: red;
+}
+.sign-in-up-out-page.open {
+  position: absolute;
+  top: 75px;
+  right: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 4px;
+  background-color: black;
+  animation: openSign 1s;
+}
+@keyframes openSign {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.sign-in-up-out-page.close {
+  display: none;
+}
+.sign-in-up-out-page button {
+  border-radius: 4px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+.sign-in-up-out-page button:hover {
+  border: 2px solid red;
+  color: red;
+}
+.burger-bar {
+  width: 50px;
+  height: 50px;
+  display: none;
+}
